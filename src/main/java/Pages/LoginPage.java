@@ -59,7 +59,11 @@ public class LoginPage
 			String loginwindow= driver.getWindowHandle();			
 			userID.sendKeys(userName);				
 			nextinput.click();	
-			wait = new WebDriverWait(driver,20);
+			int i =5;
+			
+			int j=i+10;
+					
+			wait = new WebDriverWait(driver,50);
 			wait.until(ExpectedConditions.visibilityOf(userPassword));			
 			userPassword.sendKeys(Password);
 			nextBtn.click();		
