@@ -67,5 +67,20 @@ public class LoginPage
 			return condition;
 		}
 		 
+		public String enterUserID2(String userName,String Password) throws InterruptedException
+		{
+			String loginwindow= driver.getWindowHandle();			
+			userID.sendKeys(userName);				
+			nextinput.click();	
+			wait = new WebDriverWait(driver,20);
+			wait.until(ExpectedConditions.visibilityOf(userPassword));			
+			userPassword.sendKeys(Password);
+			nextBtn.click();		
+			String condition = inValidMsg.getText();
+			return condition;
+		}
+		
+		
+		
 	
 }
