@@ -20,7 +20,7 @@ public class ChromeDriverSetUp
 	public void driverSetUp(String Url)
 	{
 		System.setProperty("webdriver.chrome.driver", "./src/Drivers/chromedriver.exe");
-		System.setProperty("webdriver.chrome.silentoutput", "true");
+		System.setProperty("webdriver.chrome.silentoutput", "false");
 		driver = new ChromeDriver();
 		wait = new WebDriverWait(driver, 5);
 		driver.get(Url);
